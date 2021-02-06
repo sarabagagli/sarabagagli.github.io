@@ -233,6 +233,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W907W9SPTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-W907W9SPTD', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -532,11 +570,12 @@
 <div class="universal-wrapper">
   
   <div class="article-style"><p><font size="5"><strong>Work in Progress</strong></font></p>
-<p><font size="4"><span style="color:#216C97"><em><strong>The (Express)Way to Segregation: Evidence from Chicago</strong></em></span></font></p>
+<p><font size="4"><span style="color:#216C97"><em><strong>The (Express)Way to Segregation: Evidence from Chicago Metropolitan Area</strong></em></span></font></p>
 <div class = "row">
 <div class = "col-8">
 <div style="text-align: justify">
-In this project I investigate how man-made barriers shape residential racial segregation in the urban context. I do so by exploiting the construction of expressways in the city of Chicago as a source of variation in neighborhoods' isolation. While these multi-lane roads increase connections among distant locations, they are also likely to locally divide areas where they pass by, hence creating barriers to interactions between nearby communities. Given the potential endogeneity of route placement, identification relies on using planned and historical routes instrumental variables, established in the urban economics literature. I begin by preliminarily documenting that being closer to a freeway (i) increases the share of black residents; (ii) reduces the amount of interactions among individuals of different races (proxied by a measure of distance to an equal distribution of black and whites within the neighborhood); (iii) widens the distance to an integrated neighborhood (where the share of black and white residents matches city shares). I then outline the mechanisms linking physical barriers to residential segregation.
+I investigate how man-made barriers shape residential racial segregation in the urban context. I exploit the construction of expressways in Chicago in the mid 1950s as a source of variation in neighborhoods' connectivity. While these multilane roads increase connections among distant locations, they are also likely to locally divide areas where they pass by, hence creating barriers to interaction between nearby communities. I begin by documenting the effect of proximity to the interstate network on the census tract share of black residents and other relevant outcome variables dynamically over time, running difference-in-differences specifications with multiple time periods. Then, I preliminarily estimate the barrier effect of expressways on opposite sides of the lanes, running a spatial matching over time. From a first set of results, I find that (i) the share of black residents increases in areas close to the interstate, and disproportionately more on one side of the lane; (ii) the value of houses drops close to the interstate, and symmetrically on both sides of the road, consistent with an overall disamenity effect of interstates in the neighborhood; (iii) there is no effect on household income. %(wealthier households move to the suburbs, but the level differences in income between places close and far from the interstates is stable over time, and I do not find any barrier effect on income).
+Relying on a unique novel dataset at the census block level, a future part of this research seeks to investigate the channels at work. Particular emphasis is put in separating a barrier from a sorting effect of interstate construction. The findings will shed light on the possibly unintended long-lasting neighborhood effects of transport infrastructures that are so pervasive in the landscape of many cities.
 </div>
 </div>
 <div class = "col-4">
