@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sara Bagagli</title>
-    <link>https://sarabagagli.github.io/research/publication/</link>
-      <atom:link href="https://sarabagagli.github.io/research/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>/research/publication/</link>
+      <atom:link href="/research/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Sara Bagagli</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://sarabagagli.github.io/images/icon_hu8122c0dce64e2b2129fc05e9e84f7bfa_8172_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu8122c0dce64e2b2129fc05e9e84f7bfa_8172_512x512_fill_lanczos_center_2.png</url>
       <title>Sara Bagagli</title>
-      <link>https://sarabagagli.github.io/research/publication/</link>
+      <link>/research/publication/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://sarabagagli.github.io/research/publication/publications/</link>
+      <link>/research/publication/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sarabagagli.github.io/research/publication/publications/</guid>
+      <guid>/research/publication/publications/</guid>
       <description></description>
     </item>
     
